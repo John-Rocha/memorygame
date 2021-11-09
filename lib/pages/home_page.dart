@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Center(
             child: Text(
-              'Memory Game',
+              'Jogo da Memória',
               style: TextStyle(
                 fontSize: 48.0,
                 fontWeight: FontWeight.bold,
@@ -48,8 +48,8 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              scoreBoard('Tries', "${tries}"),
-              scoreBoard('Score', "${score}"),
+              scoreBoard('Tentativas', "${tries}"),
+              scoreBoard('Pontos', "${score}"),
             ],
           ),
           SizedBox(
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             child: GridView.builder(
               itemCount: _game.gameImg!.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+                crossAxisCount: 4,
                 crossAxisSpacing: 16.0,
                 mainAxisSpacing: 16.0,
               ),
@@ -67,7 +67,6 @@ class _HomePageState extends State<HomePage> {
                 return GestureDetector(
                   onTap: () {
                     //aqui iremos colocar toda a lógica do game
-                    print(_game.cardsList[index]);
                     setState(() {
                       tries++;
                       _game.gameImg![index] = _game.cardsList[index];
@@ -80,13 +79,10 @@ class _HomePageState extends State<HomePage> {
                     if (_game.matchCheck.length == 2) {
                       if (_game.matchCheck[0].values.first ==
                           _game.matchCheck[1].values.first) {
-                        print('true');
                         score += 100;
                         _game.matchCheck.clear();
                       } else {
-                        print(false);
                         Future.delayed(Duration(milliseconds: 500), () {
-                          print(_game.gameImg);
                           setState(() {
                             _game.gameImg![_game.matchCheck[0].keys.first] =
                                 _game.hiddenCardPath;

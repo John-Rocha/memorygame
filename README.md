@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 # Memory Game
+=======
+# Jogo da Memória
 
-A new Flutter project.
+Um joguinho de memória com Dart e Flutter!!
+
+https://user-images.githubusercontent.com/52468127/141001064-b9a58c45-fd15-40be-bb41-1b2537a22188.mp4
+>>>>>>> b643272c3e2d97cbe508c583a10f05ae7e7a4eac
+
 
 ## Getting Started
+
+É só clonar o repositório e buildar ```flutter run```
 
 This project is a starting point for a Flutter application.
 

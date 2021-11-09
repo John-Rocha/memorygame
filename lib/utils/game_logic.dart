@@ -4,18 +4,26 @@ class GameLogic {
 
   final List<String> cardsList = [
     "assets/images/circle.png",
+    "assets/images/heart.png",
     "assets/images/triangle.png",
     "assets/images/circle.png",
     "assets/images/heart.png",
     "assets/images/star.png",
-    "assets/images/triangle.png",
     "assets/images/star.png",
+    "assets/images/triangle.png",
     "assets/images/heart.png",
+    "assets/images/circle.png",
+    "assets/images/star.png",
+    "assets/images/triangle.png",
+    "assets/images/circle.png",
+    "assets/images/triangle.png",
+    "assets/images/heart.png",
+    "assets/images/star.png",
   ];
 
   List<Map<int, String>> matchCheck = [];
 
-  final int cardCount = 8;
+  final int cardCount = 16;
 
   //init the Game
   void initGame() {

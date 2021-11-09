@@ -1,4 +1,4 @@
-# memory_game
+# Memory Game
 
 A new Flutter project.
 
